@@ -1,7 +1,19 @@
-<h1>{{ title }}</h1>
+<mat-toolbar class="mat-elevation-z6" color="white"><h1>{{ title }}</h1><mat-icon matBadge="15" matBadgeColor="warn">home</mat-icon></mat-toolbar>
+
 <nav>
     <a routerLink="/dashboard">Dashboard</a>
     <a routerLink="/heroes">Heroes</a>
 </nav>
-<router-outlet></router-outlet>
+<div>
+    <router-outlet></router-outlet>
+</div>
 <app-messages></app-messages>
+ 
+<div class="footer">
+<mat-paginator [length]="100"
+              [pageSize]="10"
+              [pageSizeOptions]="[5, 10, 25, 100]"
+              aria-label="Select page">
+</mat-paginator>
+</div>
+<!-- <mat-slider min="1" max="100" step="1" value="50"></mat-slider> -->
