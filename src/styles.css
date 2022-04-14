@@ -14,7 +14,7 @@ h1 {
     margin: 2em;
   }
   body, input[type="text"], button {
-    color: #333;
+    color: rgb(51, 51, 51);
     font-family: Cambria, Georgia, serif;
   }
   button {
