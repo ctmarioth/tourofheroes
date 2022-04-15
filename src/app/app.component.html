@@ -1,7 +1,40 @@
-<h1>{{ title }}</h1>
+<mat-toolbar class="mat-elevation-z6" color="white"><h1>{{ title }}</h1>
+        <mat-icon align="end" matBadge="15" matBadgeColor="warn">home</mat-icon>
+    </mat-toolbar>
 <nav>
     <a routerLink="/dashboard">Dashboard</a>
     <a routerLink="/heroes">Heroes</a>
 </nav>
-<router-outlet></router-outlet>
+<div>
+    <router-outlet></router-outlet>
+</div>
+
+<mat-card class="example-card">
+    <mat-card-subtitle>MARVEL CINEMATIC UNIVERSE (MCU)</mat-card-subtitle>
+    <mat-card-title></mat-card-title>
+    <mat-card-content>
+      <p>What is Hero?</p>
+      <p>{{ longText }}</p>
+    </mat-card-content>
+    <mat-divider inset></mat-divider>
+    <mat-card-actions>
+      <button mat-button>LIKE</button>
+      <button mat-button>SHARE</button>
+    </mat-card-actions>
+    <mat-card-footer>
+      <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+    </mat-card-footer>
+  </mat-card>
+
+  <br>
+
 <app-messages></app-messages>
+ 
+<!-- <div class="footer">
+<mat-paginator [length]="100"
+              [pageSize]="10"
+              [pageSizeOptions]="[5, 10, 25, 100]"
+              aria-label="Select page">
+</mat-paginator>
+</div> -->
+<!-- <mat-slider min="1" max="100" step="1" value="50"></mat-slider> -->
